@@ -1,3 +1,4 @@
+import 'package:collegenepal/features/auth/signupPage.dart';
 import 'package:collegenepal/features/home/bottom_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -102,7 +103,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     children: [
                       const Text("Don't have an Account?"),
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, SignupScreen.routeName);
+                        },
                         child: const Text(
                           "Sign up now",
                           style: TextStyle(

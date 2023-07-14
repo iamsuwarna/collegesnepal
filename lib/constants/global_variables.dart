@@ -17,7 +17,7 @@ class GlobalVariables {
   // static const mainColor = Colors.purple;
   static const backgroundColour = Color.fromRGBO(242, 244, 255, 1);
   static const eventListColor = Color.fromRGBO(0, 191, 225, 1);
-  static const secondaryColor = Color.fromRGBO(255, 153, 0, 1);
+  static const secondaryColor = Color.fromRGBO(254, 181, 72, 1);
   static const Color greyBackgroundColor = Color(0xffebecee);
   static var selectedNavBarColor = Colors.cyan[800]!;
   static const unselectedNavBarColor = Colors.black87;
@@ -52,6 +52,24 @@ class GlobalVariables {
     "Tribhuvan University revised exam schedules of BSc BBS BA BEd third year 2079 commencing from Ashad 2080",
     "Tribhuvan University published revised exam schedule of BSc BBS BA BEd third year 2079.",
   ];
+
+//list for academic details
+
+  static const List<String> plusTwoDetails = [
+    "Science",
+    "Management",
+    "Humanities",
+    "Hotel Management"
+  ];
+  static const List<String> bachelorsDetails = [
+    "BIT",
+    "BCA",
+    "BHM",
+    "BBM",
+    "BE Computer",
+    "BIM"
+  ];
+  static const List<String> mastersDetails = ["MBA", "MIT", "MSc"];
 
   static const List<Map<String, dynamic>> collegeData = [
     {
@@ -153,6 +171,69 @@ class GlobalVariables {
     {
       'programName': 'A Level',
       'totalNumber': '12 Colleges',
+    },
+  ];
+
+  static const List<Map<String, dynamic>> collegedetails = [
+    {
+      'college_name': 'Islington College',
+      'address': 'kamalpokhari, kathmandu',
+      'phoneNumber': '98261251515'
+    },
+    {
+      'college_name': 'Divyagyan College',
+      'address': 'kamaladhi, kathmandu',
+      'phoneNumber': '9827262617'
+    },
+    {
+      'college_name': 'Himalaya College',
+      'address': 'Damak, Jhapa',
+      'phoneNumber': '01728281'
+    },
+    {
+      'college_name': 'Kathmandu valley secondary school',
+      'address': 'Dillibajar, kathmandu',
+      'phoneNumber': '018271717'
+    },
+    {
+      'college_name': 'Trinity International College',
+      'address': 'Dillibazar, kathmandu',
+      'phoneNumber': '019271616'
+    },
+    {
+      'college_name': 'Jana Bhawana College',
+      'address': 'Lakeside, Pokhara',
+      'phoneNumber': '0192818191'
+    },
+    {
+      'college_name': 'Islington College',
+      'address': 'kamalpokhari, kathmandu',
+      'phoneNumber': '98261251515'
+    },
+    {
+      'college_name': 'Divyagyan College',
+      'address': 'kamaladhi, kathmandu',
+      'phoneNumber': '9827262617'
+    },
+    {
+      'college_name': 'Himalaya College',
+      'address': 'Damak, Jhapa',
+      'phoneNumber': '01728281'
+    },
+    {
+      'college_name': 'Kathmandu valley secondary school',
+      'address': 'Dillibajar, kathmandu',
+      'phoneNumber': '018271717'
+    },
+    {
+      'college_name': 'Trinity International College',
+      'address': 'Dillibazar, kathmandu',
+      'phoneNumber': '019271616'
+    },
+    {
+      'college_name': 'Jana Bhawana College',
+      'address': 'Lakeside, Pokhara',
+      'phoneNumber': '0192818191'
     },
   ];
 }

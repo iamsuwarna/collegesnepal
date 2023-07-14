@@ -1,8 +1,8 @@
 import 'package:collegenepal/features/auth/login_screen.dart';
 import 'package:collegenepal/router.dart';
 import 'package:flutter/material.dart';
-
 import 'constants/global_variables.dart';
+import 'features/skippable/skippage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,12 +18,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           // scaffoldBackgroundColor: GlobalVariables.backgroundColour,
           colorScheme:
-          const ColorScheme.light(primary: GlobalVariables.mainColor),
+              const ColorScheme.light(primary: GlobalVariables.mainColor),
           appBarTheme: const AppBarTheme(
-              elevation: 0, iconTheme: IconThemeData(color: Colors.black))),
+              elevation: 0, iconTheme: IconThemeData(color: Colors.white))),
       onGenerateRoute: (settings) => generateRoute(settings),
-      home: const LoginScreen(),
+      home: ScreenSlider(),
     );
   }
 }
-

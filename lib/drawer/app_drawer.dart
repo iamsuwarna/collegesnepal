@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import '../constants/global_variables.dart';
-
 class AppDrawer extends StatefulWidget {
   const AppDrawer({Key? key}) : super(key: key);
 
@@ -37,7 +35,7 @@ class _AppDrawerState extends State<AppDrawer> {
                 thickness: 3,
               ),
               const ListTile(
-                leading: Icon(Icons.newspaper),
+                leading: Icon(Icons.school),
                 title: Text(
                   "University",
                   style: TextStyle(
@@ -46,7 +44,7 @@ class _AppDrawerState extends State<AppDrawer> {
                 ),
               ),
               const ListTile(
-                leading: Icon(Icons.newspaper),
+                leading: Icon(Icons.apartment),
                 title: Text(
                   "College",
                   style: TextStyle(
@@ -55,7 +53,7 @@ class _AppDrawerState extends State<AppDrawer> {
                 ),
               ),
               const ListTile(
-                leading: Icon(Icons.newspaper),
+                leading: Icon(Icons.book),
                 title: Text(
                   "Programs",
                   style: TextStyle(
@@ -64,7 +62,7 @@ class _AppDrawerState extends State<AppDrawer> {
                 ),
               ),
               const ListTile(
-                leading: Icon(Icons.newspaper),
+                leading: Icon(Icons.trending_up),
                 title: Text(
                   "Popular Colleges",
                   style: TextStyle(
@@ -73,7 +71,7 @@ class _AppDrawerState extends State<AppDrawer> {
                 ),
               ),
               const ListTile(
-                leading: Icon(Icons.newspaper),
+                leading: Icon(Icons.door_front_door),
                 title: Text(
                   "Entrance Classes",
                   style: TextStyle(
@@ -82,7 +80,7 @@ class _AppDrawerState extends State<AppDrawer> {
                 ),
               ),
               const ListTile(
-                leading: Icon(Icons.newspaper),
+                leading: Icon(Icons.assignment),
                 title: Text(
                   "Syllabus",
                   style: TextStyle(
@@ -91,7 +89,7 @@ class _AppDrawerState extends State<AppDrawer> {
                 ),
               ),
               const ListTile(
-                leading: Icon(Icons.newspaper),
+                leading: Icon(Icons.more_horiz),
                 title: Text(
                   "Others",
                   style: TextStyle(
@@ -100,7 +98,7 @@ class _AppDrawerState extends State<AppDrawer> {
                 ),
               ),
               const ListTile(
-                leading: Icon(Icons.newspaper),
+                leading: Icon(Icons.mobile_friendly),
                 title: Text(
                   "Advertise With Us",
                   style: TextStyle(

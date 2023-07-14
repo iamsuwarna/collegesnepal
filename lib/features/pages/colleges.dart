@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../constants/global_variables.dart';
+import '../colleges/collegedetails.dart';
 
 class CollegePage extends StatefulWidget {
   const CollegePage({Key? key}) : super(key: key);
@@ -56,90 +57,103 @@ class _CollegePageState extends State<CollegePage> {
           ],
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(10),
-        child: Column(
-          children: [
-            Container(
-              height: 45,
-              color: GlobalVariables.backColor,
-              width: double.infinity,
-              child: const Center(
-                child: Text(
-                  "EXPLORE COLLEGES AND DEGREE",
-                  style: TextStyle(
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.blueAccent),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(10),
+          child: Column(
+            children: [
+              Container(
+                height: 45,
+                color: GlobalVariables.backColor,
+                width: double.infinity,
+                child: const Center(
+                  child: Text(
+                    "EXPLORE COLLEGES AND DEGREE",
+                    style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.blueAccent),
+                  ),
                 ),
               ),
-            ),
-            const SizedBox(
-              height: 5,
-            ),
-            Expanded(
-              child: GridView.builder(
-                shrinkWrap: true,
-                scrollDirection: Axis.vertical,
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
-                  childAspectRatio: 1,
-                ),
-                itemCount: GlobalVariables.collegeData.length,
-                // itemCount: 1,
-                itemBuilder: (context, index) {
-                  final program = GlobalVariables.collegeData[index];
-                  final programName = program['programName'];
-                  final totalNumber = program['totalNumber'];
-                  bool isODD = false;
-                  if (index % 2 == 0) {
-                    isODD = false;
-                  } else {
-                    isODD = true;
-                  }
-
-                  return !isODD
-                      ? Card(
-                          color: GlobalVariables.backColor,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                programName,
-                                style: const TextStyle(color: Colors.blue),
-                              ),
-                              const SizedBox(
-                                height: 5,
-                              ),
-                              Text(
-                                totalNumber,
-                                style: const TextStyle(color: Colors.black54),
-                              ),
-                            ],
-                          ),
-                        )
-                      : Card(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                programName,
-                                style: const TextStyle(color: Colors.blue),
-                              ),
-                              const SizedBox(
-                                height: 5,
-                              ),
-                              Text(
-                                totalNumber,
-                                style: const TextStyle(color: Colors.black54),
-                              ),
-                            ],
-                          ),
-                        );
+              const SizedBox(
+                height: 5,
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CollegeDetails()),
+                  );
                 },
+                child: Expanded(
+                  child: GridView.builder(
+                    shrinkWrap: true,
+                    scrollDirection: Axis.vertical,
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 3,
+                      childAspectRatio: 1,
+                    ),
+                    itemCount: GlobalVariables.collegeData.length,
+                    // itemCount: 1,
+                    itemBuilder: (context, index) {
+                      final program = GlobalVariables.collegeData[index];
+                      final programName = program['programName'];
+                      final totalNumber = program['totalNumber'];
+                      bool isODD = false;
+                      if (index % 2 == 0) {
+                        isODD = false;
+                      } else {
+                        isODD = true;
+                      }
+
+                      return !isODD
+                          ? Card(
+                              color: GlobalVariables.backColor,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    programName,
+                                    style: const TextStyle(color: Colors.blue),
+                                  ),
+                                  const SizedBox(
+                                    height: 5,
+                                  ),
+                                  Text(
+                                    totalNumber,
+                                    style:
+                                        const TextStyle(color: Colors.black54),
+                                  ),
+                                ],
+                              ),
+                            )
+                          : Card(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    programName,
+                                    style: const TextStyle(color: Colors.blue),
+                                  ),
+                                  const SizedBox(
+                                    height: 5,
+                                  ),
+                                  Text(
+                                    totalNumber,
+                                    style:
+                                        const TextStyle(color: Colors.black54),
+                                  ),
+                                ],
+                              ),
+                            );
+                    },
+                  ),
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
